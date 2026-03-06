@@ -294,7 +294,10 @@ resource "azapi_resource" "spoke_to_hub_peering" {
     }
   }
 
-  depends_on = [azapi_resource.virtual_network]
+  depends_on = [
+    azapi_resource.virtual_network,
+    azapi_resource.subnet,
+  ]
 }
 
 # Hub → Spoke のピアリング（connectivityサブスクリプションのプロバイダーを使用）
@@ -318,5 +321,8 @@ resource "azapi_resource" "hub_to_spoke_peering" {
     }
   }
 
-  depends_on = [azapi_resource.virtual_network]
+  depends_on = [
+    azapi_resource.virtual_network,
+    azapi_resource.subnet,
+  ]
 }
