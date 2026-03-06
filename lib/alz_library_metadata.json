@@ -8,5 +8,23 @@
       "path": "platform/alz",
       "ref": "2026.01.2"
     }
+  ],
+  "policy_definitions": [
+    {
+      "name": "Audit-Non-Terraform-Resources",
+      "path": "policy_definitions/Audit-Non-Terraform-Resources.alz_policy_definition.json"
+    }
+  ],
+  "policy_set_definitions": [
+    {
+      "name": "IaC-Compliance-Initiative",
+      "path": "policy_set_definitions/IaC-Compliance-Initiative.alz_policy_set_definition.json"
+    }
+  ],
+  "policy_assignments": [
+    {
+      "name": "Assign-IaC-Compliance",
+      "path": "policy_assignments/Assign-IaC-Compliance.alz_policy_assignment.json"
+    }
   ]
 }
